@@ -1,0 +1,1 @@
+json.array! @employee_overdrafts, partial: 'employee_overdrafts/employee_overdraft', as: :employee_overdraft

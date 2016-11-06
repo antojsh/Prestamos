@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client:</b>
+  <%= @overdraft.client %>
+</p>
+
+<p>
+  <b>Employee:</b>
+  <%= @overdraft.employee %>
+</p>
+
+<p>
+  <b>Valor:</b>
+  <%= @overdraft.valor %>
+</p>
+
+<p>
+  <b>Plazo:</b>
+  <%= @overdraft.plazo %>
+</p>
+
+<p>
+  <b>Tipo plazo:</b>
+  <%= @overdraft.tipo_plazo %>
+</p>
+
+
+<%= link_to 'Edit', edit_employee_overdraft_path(@overdraft.employee, @overdraft) %> |
+<%= link_to 'Back', employee_overdrafts_path(@overdraft.employee) %>

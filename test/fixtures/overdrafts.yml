@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_id: 
+  employee_id: 
+  valor: 1
+  plazo: MyString
+  tipo_plazo: MyString
+
+two:
+  client_id: 
+  employee_id: 
+  valor: 1
+  plazo: MyString
+  tipo_plazo: MyString

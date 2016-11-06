@@ -1,0 +1,31 @@
+<h1>Listing overdrafts</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Employee</th>
+    <th>Valor</th>
+    <th>Plazo</th>
+    <th>Tipo plazo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @overdrafts.each do |overdraft| %>
+  <tr>
+    <td><%= overdraft.client %></td>
+    <td><%= overdraft.employee %></td>
+    <td><%= overdraft.valor %></td>
+    <td><%= overdraft.plazo %></td>
+    <td><%= overdraft.tipo_plazo %></td>
+    <td><%= link_to 'Show', [overdraft.employee, overdraft] %></td>
+    <td><%= link_to 'Edit', edit_employee_overdraft_path(overdraft.employee, overdraft) %></td>
+    <td><%= link_to 'Destroy', [overdraft.employee, overdraft], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Overdraft', new_employee_overdraft_path(params[:employee_id]) %>

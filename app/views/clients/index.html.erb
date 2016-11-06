@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clientes</h1>
+
+
+
+
+<div class="widget-box">
+        <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+          <h5>Data table</h5>
+        </div>
+        <div class="widget-content nopadding">
+          <table class="table table-bordered data-table">
+            <thead>
+              <tr>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Identificacion</th>
+                    <th>Fecha nacimiento</th>
+                    <th>Direccion</th>
+                    <th>Latitud</th>
+                    <th>Longitud</th>
+                    <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% @clients.each do |client| %>
+              <tr class="gradeX">
+                <td><%= client.nombres %></td>
+                <td><%= client.apellidos %></td>
+                <td><%= client.identificacion %></td>
+                <td><%= client.fecha_nacimiento %></td>
+                <td><%= client.direccion %></td>
+                <td><%= client.latitud %></td>
+                <td><%= client.longitud %></td>
+                <td><%= link_to 'Show', client %>
+                <%= link_to 'Edit', edit_client_path(client) %>
+                <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <%= link_to 'New Client', new_client_path , :class => 'btn btn-primary'%>
+    
